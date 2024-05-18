@@ -1,0 +1,28 @@
+.image-delivery {
+  display: block;
+  transform: translateX(-1000px);
+  animation: deliver 4000ms 1000ms forwards;
+  margin-bottom: 2rem;
+}
+
+.transition-up {
+  display: block;
+  opacity: 0;
+  animation: reveal 4000ms var(--d) forwards;
+  @apply font-bold text-2xl capitalize text-primary;
+}
+
+@keyframes deliver {
+  to {
+    transform: none;
+  }
+}
+@keyframes reveal {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
